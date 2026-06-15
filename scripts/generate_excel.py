@@ -269,6 +269,28 @@ def update_from_json():
     wb.save(EXCEL_PATH)
     print(f"✅ Excel mis à jour : {EXCEL_PATH} ({total} offres)")
 
+    # Auto-export CSV
+    import csv
+    csv_path = os.path.join(DATA_DIR, "cyber-tech_prospection.csv")
+    with open(csv_path, "w", newline="", encoding="utf-8") as f:
+        w = csv.writer(f)
+        w.writerow([
+            "Titre du poste", "Établissement", "Type de mission",
+            "Matières enseignées", "Niveau d'enseignement", "Localisation",
+            "Date de publication", "Date limite", "URL",
+            "Email contact RH", "Statut", "Notes"
+        ])
+        for o in offres:
+            w.writerow([
+                o.get("titre", ""), o.get("etablissement", ""),
+                o.get("type_mission", ""), o.get("matieres", ""),
+                o.get("niveau", ""), o.get("localisation", ""),
+                o.get("date_publication", ""), o.get("date_limite", ""),
+                o.get("url", ""), o.get("email_contact", ""),
+                o.get("statut", "Non contacté"), o.get("notes", "")
+            ])
+    print(f"✅ CSV mis à jour : {csv_path} ({total} offres)")
+
 
 if __name__ == "__main__":
     if "--update" in sys.argv:
