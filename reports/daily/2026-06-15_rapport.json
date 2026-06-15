@@ -1,0 +1,25 @@
+{
+  "date": "2026-06-15",
+  "total_offres": 2,
+  "statuts": {
+    "non_contacte": 0,
+    "envoye": 2,
+    "reponse_positive": 0
+  },
+  "offres": [
+    {
+      "titre": "Enseignant-chercheur en Réseaux et Cybersécurité (Section CNU 27/61)",
+      "etablissement": "IPSA — IONIS Group",
+      "statut": "Email envoyé",
+      "url": "https://careers.werecruit.io/fr/ionis-group/offres/enseignant-chercheur-en-reseaux-et-cybersecurite-section-cnu-2761-2634c9",
+      "source": "EPITA carrières (ionis-group)"
+    },
+    {
+      "titre": "Enseignant en informatique, réseau et cybersécurité",
+      "etablissement": "IPSA — IONIS Group",
+      "statut": "Email envoyé",
+      "url": "https://careers.werecruit.io/fr/ionis-group/offres/enseignant-en-informatique-reseau-et-cybersecurite-0b2fc1",
+      "source": "EPITA carrières (ionis-group)"
+    }
+  ]
+}
